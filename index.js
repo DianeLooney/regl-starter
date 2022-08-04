@@ -11,7 +11,7 @@ const drawTriangle = regl({
     uniform float time;
 
     void main() {
-      gl_FragColor = color * 0.5 * (1.0 + sin(time));
+      gl_FragColor = color * 2.0 * (1.0 + sin(time)) + sin(gl_FragCoord * 100.0);
     }`,
 
   vert: `
